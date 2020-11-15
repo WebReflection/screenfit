@@ -17,7 +17,7 @@ addEventListener('screenfit', ({detail}) => {
 });
 ```
 
-It's kinda to include this module as `defer` or `async` or `module`, as it adjusts both `<html>` and `<body>` styles once, so the sooner it runs, the better, and less flicking, it'll be for your web/application.
+It's important to include this module *ASAP* as *src*, `defer`, or `module`, as it adjusts both `<html>` and `<body>` styles once, so the sooner it runs, the better it is for your web/application.
 
 
 
