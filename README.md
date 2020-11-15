@@ -64,3 +64,4 @@ This module goal is to fix the ability to fullfill a screen in both `width` and,
 
  - IE11 and Kindle experimental browser need features detection (see [index.html](./index.html))
  - iOS 12 (iPad does *not* trigger any resize), possible work around for iOS < 13 but not sure how to detect the available size without the keyboard: `document.addEventListener('focus', resize, true)`. If you know how to get the right height with an *iPad* on *iOS* 12 with a keyboard up, please file an issue/contact me, thank you!
+ - Some weird edge case might use non-system related overlays that can't be detected from JS or CSS ... in that case, be sure your web/application shows most relevant informations in the center of the screen or above some known threshold
