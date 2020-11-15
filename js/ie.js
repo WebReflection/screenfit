@@ -1,0 +1,1 @@
+!function(a){a.write('<script src="//unpkg.com/@ungap/custom-event">\x3c/script>');a.write('<script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js">\x3c/script>');a.documentElement.className+=" ie"}(document);

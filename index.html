@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>screenfit live demo</title>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+  <style>
+  body, input {
+    font-family: sans-serif;
+  }
+  html {
+    background: #000;
+  }
+  body {
+    border: 16px solid #252545;
+    border-radius: 16px;
+    background-color: #151515;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+  }
+  body.fit {
+    opacity: 1;
+  }
+  main {
+    min-height: 50%;
+    flex-grow: 1;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    font-size: 1rem;
+    max-width: calc(100% - 64px);
+  }
+  footer {
+    color: #eee;
+    padding: 16px;
+    font-size: small;
+    border-top: 16px solid #252545;
+  }
+  </style>
+  <script data-polyfill=kindle>if(!Object.bind)document.write('<script src="js/kindle.js"><\x2fscript>');</script>
+  <script data-polyfill=ie11>try{new CustomEvent('💩')}catch(_){document.write('<script src="js/ie.js"><\x2fscript>')}</script>
+  <script defer src="min.js"></script>
+  <script>
+  addEventListener('screenfit', function (event) {
+    document.body.className = 'fit';
+    document.querySelector('footer').textContent = [
+      'current: ' + Math.round(event.detail.height),
+      'inner: ' + Math.round(innerHeight),
+      'avail: ' + Math.round(screen.availHeight)
+    ].join(' - ');
+  });
+  </script>
+</head>
+<body>
+  <main>
+    <input>
+  </main>
+  <footer></footer>
+</body>
+</html>
