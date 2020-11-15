@@ -8,7 +8,13 @@ A cross platform, cross WebView, solution to fit 100% any Web page.
 
 ## Usage
 
-Include *screenfit* helper on top of your *HTML* page/application, and optionally opt in to listen to changes:
+Include *screenfit* helper on top of your *HTML* page/application:
+
+```html
+<script defer src="https://unpkg.com/screenfit"></script>
+```
+
+and optionally opt-in to listen to changes:
 
 ```js
 addEventListener('screenfit', ({detail}) => {
