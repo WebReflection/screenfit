@@ -10,6 +10,7 @@ document.head.appendChild(document.createElement('style')).textContent =
 'html,body{padding:0;margin:0;overflow:hidden;box-sizing:border-box;\
 height:100%;height:100vh;height:-moz-available;height:-webkit-fill-available}';
 document.addEventListener('DOMContentLoaded', resize, {once: true});
+addEventListener('orientationchange', resize);
 detail.addEventListener('resize', resize);
 function resize() {
   document.body.style.height = detail.height + 'px';

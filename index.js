@@ -23,6 +23,7 @@ height:100%;height:100vh;height:-moz-available;height:-webkit-fill-available}';
   document.addEventListener('DOMContentLoaded', resize, {
     once: true
   });
+  addEventListener('orientationchange', resize);
   detail.addEventListener('resize', resize);
 
   function resize() {
