@@ -4,3 +4,7 @@
 node_modules/
 rollup/
 test/
+*.png
+index.html
+manifest.json
+js/
