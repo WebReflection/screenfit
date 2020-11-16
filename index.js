@@ -23,15 +23,17 @@ height:100%;height:100vh;height:-moz-available;height:-webkit-fill-available}';
   document.addEventListener('DOMContentLoaded', resize, {
     once: true
   });
-  addEventListener('orientationchange', setTimeout.bind(null, resize, 0));
+  addEventListener('orientationchange', resize);
   detail.addEventListener('resize', resize);
+  var timer = 0;
 
   function resize() {
     document.body.style.height = detail.height + 'px';
     scrollTo(0, 0); // Needed for Windows Phone
 
     setTimeout(scrollTo, 300, 0, 0);
-    dispatchEvent(new CustomEvent('screenfit', {
+    clearTimeout(timer);
+    timer = setTimeout(dispatchEvent, 0, new CustomEvent('screenfit', {
       detail: detail
     }));
   }
