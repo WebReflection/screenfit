@@ -1,6 +1,6 @@
 {
   "name": "screenfit",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A cross platform, cross WebView, solution to fit 100% any Web page.",
   "main": "./cjs/index.js",
   "scripts": {
