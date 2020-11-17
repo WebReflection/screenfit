@@ -10,6 +10,7 @@
       scrollTo = _self.scrollTo,
       setTimeout = _self.setTimeout,
       visualViewport = _self.visualViewport;
+  var rescroll = /Windows Phone/.test(navigator.userAgent);
   var detail = visualViewport || {
     addEventListener: addEventListener.bind(self),
 
@@ -25,9 +26,8 @@
 
   var resize = function resize() {
     document.body.style.height = detail.height + 'px';
-    scrollTo(0, 0); // Needed for Windows Phone
-
-    setTimeout(scrollTo, 300, 0, 0);
+    scrollTo(0, 0);
+    if (rescroll) setTimeout(scrollTo, 300, 0, 0);
     dispatchEvent(new CustomEvent('screenfit', {
       detail: detail
     }));
