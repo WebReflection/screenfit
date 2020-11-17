@@ -6,11 +6,11 @@
   <title>Embedded SWOM</title>
   <style>
   body {
+    padding: 0;
     font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
     flex-direction: column;
   }
   pre {
@@ -20,19 +20,28 @@
   iframe {
     border: 1px solid silver;
     width: 70%;
-    height: 50%;
+    min-height: 320px;
     border-radius: 16px;
+  }
+  @media only screen and (max-width: 640px) {
+    iframe, pre {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
   }
   </style>
 </head>
 <body>
   <h1>Embedded <a title="Service Worker Offline Map" href="https://github.com/WebReflection/map#readme">SWOM</a></h1>
-  <pre><code>
-    &lt;iframe
-      frameborder=0
-      src="//webreflection.github.io/map/?41.890209405005706|12.492417349999982|17"&gt;
-    &lt;/iframe&gt;
-  </code></pre>
+  <pre><code>&lt;!-- add #clean to the src for no popup --&gt;
+&lt;iframe
+  frameborder=0
+  src="//webreflection.github.io/map/?41.890209405005706|12.492417349999982|17"&gt;
+&lt;/iframe&gt;</code></pre>
+  <hr>
   <iframe frameborder=0 src="https://webreflection.github.io/map/?41.890209405005706|12.492417349999982|17"></iframe>
+  <hr>
+  <iframe frameborder=0 src="https://webreflection.github.io/map/?41.890209405005706|12.492417349999982|17#clean"></iframe>
 </body>
 </html>
