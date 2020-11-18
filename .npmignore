@@ -3,8 +3,9 @@
 .travis.yml
 node_modules/
 rollup/
+map/
 test/
-*.png
+img/
 index.html
 manifest.json
 js/
