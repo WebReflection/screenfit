@@ -2,7 +2,7 @@
 
 A cross platform, cross WebView, solution to fit 100% any Web page.
 
-**[Live Demo](https://webreflection.github.com/screenfit/)**
+**[Live Demo](https://webreflection.github.io/screenfit/)**
 
 
 
